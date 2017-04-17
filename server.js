@@ -31,8 +31,8 @@ app.get('/user', function(req, res) {
   /*https.post("https://graph.facebook.com" +
     "/v2.8/oauth/access_token?" +
     "grant_type=fb_exchange_token&" +
-    "client_id=825811627566001&" +
-    "client_secret=" + "38e33c72e827f26a6f3dfb962e8345f5" + "&" +
+    "client_id={client_id}&" +
+    "client_secret=" + "{client_secret}" + "&" +
     "fb_exchange_token=" + req.query.token,
     function(res) {
       //console.log(JSON.stringify(res));
@@ -40,20 +40,8 @@ app.get('/user', function(req, res) {
           console.log(JSON.stringify(body));
         });
     });*/
-    /*https.get("https://graph.facebook.com/oauth/client_code?access_token=" +
-    req.query.token +
-    "&client_secret=" +
-    "38e33c72e827f26a6f3dfb962e8345f5" +
-    "&redirect_uri=" +
-    "/auth/handler" +
-    "&client_id=" +
-    "825811627566001",
-    function(res) {
-        res.on('code', function(body) {
-          console.log(body)
-        });
-    });*/
 });
+
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
