@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Sample App</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap and our own personal stylesheet -->
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/facebook.js"></script>
+    <script>
+    window.fbAsyncInit = function() {
+
+    	// Initialize the Facebook SDK. Make sure to change appId to your
+    	// value.
+    	FB.init({
+    		appId      : '825811627566001',
+    									// the session
+    		xfbml      : true,  // parse social plugins on this page
+    		version    : 'v2.8' // use version 2.2
+    	});
+
+    	// Check logged in status
+    	init(FB);
+    };
+
+    //This code loads the Facebook SDK asynchronously. This way, the page
+    //is displayed as soon as possible, and the Facebook elements are added
+    //later when they are available.
+    (function(d, s, id) {
+    	var js, fjs = d.getElementsByTagName(s)[0];
+
+    	// If there is already a facebook-jssdk element, do nothing.
+    	// it means the Facebook SDK is already available.
+    	if (d.getElementById(id)) return;
+
+    	// Create an element for the Facebook SDK and call it
+    	// facebook-jssdk. Put the element into the variable
+    	// js
+    	js = d.createElement(s); js.id = id;
+
+    	// This is the script to get the source for the SDK.
+    	js.src = "//connect.facebook.net/en_US/sdk.js";
+
+    	// Insert the script before the first element in the
+    	// document
+    	fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>This Is Heroku Awesome!</h1>
+        <p>This is the sample of a tutorial on <a href="https://scotch.io">scotch.io</a></p>
+        <a href="https://scotch.io/tutorials/" class="btn btn-primary btn-lg">View the Tutorial</a>
+    </div>
+</div>
+
+</body>
+</html>
